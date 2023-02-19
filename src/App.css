@@ -2,7 +2,10 @@
 
 :root {
   --color-bar: #241e08;
-  --color-light: #fff;
+  --color-card: #645954;
+  --color-braille: pink;
+  --color-dark: #000;
+  --color-light: #ccc;
   --font-stack: "Noto Sans", Helvetica, Arial, sans-serif;
   --font-strong: 700 14px/20px var(--font-stack);
   --font-default: 400 14px/20px var(--font-stack);
@@ -17,4 +20,12 @@
 
 body {
   font: var(--font-default);
+}
+
+.description {
+  margin: 20px;
+}
+
+.ref-table {
+  margin: 20px;
 }
