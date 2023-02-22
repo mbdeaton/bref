@@ -1,5 +1,6 @@
 .ref-table {
+  margin: var(--margin-page);
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  gap: 12px;
+  gap: calc(0.2 * var(--margin-page));
 }

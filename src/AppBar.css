@@ -1,25 +1,23 @@
 .app-bar {
-  background-color: var(--color-bar);
-  height: 52px;
+  background-color: var(--color-dark);
+  height: calc(3 * var(--margin-page));
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .app-bar .app-name {
-  font: var(--font-strong);
   color: var(--color-light);
   flex: 1;
 }
 
 .app-bar .logo {
-  height: 40px;
+  height: calc(2 * var(--margin-page));
   margin: auto 12px;
 }
 
 .app-bar svg {
-  width: 24px;
-  height: 24px;
-  margin: auto 8px;
-  fill: white;
+  height: calc(2 * var(--margin-page));
+  margin: auto calc(0.5 * var(--margin-page));
+  fill: var(--color-light);
 }
