@@ -9,6 +9,7 @@
 .app-bar .app-name {
   color: var(--color-light);
   flex: 1;
+  font-size: calc(2 * var(--margin-page));
 }
 
 .app-bar .logo {
