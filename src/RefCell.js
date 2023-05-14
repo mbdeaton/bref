@@ -1,4 +1,4 @@
-import br from "braille";
+import br from "./braille";
 import "./RefCell.css";
 
 function RefCell({ char }) {

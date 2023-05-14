@@ -2,7 +2,7 @@ import RefCell from "./RefCell";
 import "./RefTable.css";
 
 function RefTable() {
-  const chars = "abcdefghijklmnopqrstuvxyz =            w";
+  const chars = "abcdefghijklmnopqrstuvxyz              w";
   return (
     <div className="ref-table">
       {chars.split("").map((c, i) => (
