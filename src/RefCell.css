@@ -2,7 +2,7 @@
   min-height: calc(4 * var(--margin-page));
   padding: calc(0.5 * var(--margin-page));
   background-color: var(--color-light);
-  font-size: calc(1.5 * var(--margin-page));
+  font-size: 1.5rem;
   border-radius: calc(0.4 * var(--margin-page));
   display: flex;
   flex-direction: column;
@@ -16,4 +16,10 @@
 
 .english {
   color: var(--color-accent-light);
+}
+
+@media only screen and (min-width: 415px) {
+  .ref-cell {
+    font-size: 1.2rem;
+  }
 }

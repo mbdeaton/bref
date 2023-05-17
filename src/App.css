@@ -11,7 +11,7 @@
   --font-stack: "Atkinson Hyperlegible", sans-serif;
   --font-strong: 700 var(--font-stack);
   --font-default: 400 var(--font-stack);
-  --margin-page: 2vmin;
+  --margin-page: 1rem;
 }
 
 * {
@@ -28,12 +28,6 @@ body {
 .description {
   margin: var(--margin-page);
   font: var(--font-default);
-  font-size: var(--margin-page);
+  font-size: 1rem;
   color: var(--color-dark);
-}
-
-@media only screen and (max-width: 415px) {
-  :root {
-    --margin-page: 4vmin;
-  }
 }
