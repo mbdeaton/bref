@@ -6,7 +6,9 @@ function App() {
   return (
     <div>
       <AppBar />
-      <h5 className="description">Visual Braille cheat sheet for Unified English Braille Grade 2</h5>
+      <h5 className="description">
+        Visual cheat sheet for Unified English Braille
+      </h5>
       <RefTable />
     </div>
   );
