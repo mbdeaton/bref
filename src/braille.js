@@ -1,8 +1,17 @@
-import braille from "./braille.json";
+import brailleCells from "./braille_from_english-array.json";
 
 export default class Braille {
-  static mapAToB = braille;
-  static mapBToA = Braille.invertMap(braille);
+  static brailleCells = brailleCells;
+  static mapAToB = Braille.createMap(brailleCells);
+  static mapBToA = Braille.invertMap(Braille.mapAToB);
+
+  static createMap(array) {
+    let obj = {};
+    array.forEach((elem) => {
+      obj[elem.english] = elem.braille;
+    });
+    return obj;
+  }
 
   static invertMap(obj) {
     return Object.fromEntries(Object.entries(obj).map(([k, v]) => [v, k]));
