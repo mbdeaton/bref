@@ -2,15 +2,19 @@ import br from "./braille";
 import RefCell from "./RefCell";
 import "./RefTable.css";
 
-function RefTable() {
-  const codepoints = [...Array(64).keys()];
+function RefTable({ displayOrder }) {
   return (
-    <div className="ref-table">
-      {codepoints.map((cp) => (
+    <div
+      className="ref-table"
+      style={{
+        gridTemplateColumns: `repeat(${displayOrder.ncol}, minmax(0, 1fr))`,
+      }}
+    >
+      {displayOrder.seq.map((cp, i) => (
         <RefCell
-          key={cp}
-          braille={br.brailleCells[cp].braille}
-          english={br.brailleCells[cp].english}
+          key={cp ?? i}
+          braille={br.brailleCells[cp]?.braille ?? ""}
+          english={br.brailleCells[cp]?.english ?? ""}
         />
       ))}
     </div>
