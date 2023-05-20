@@ -188,6 +188,10 @@
     "english": "(the)"
   },
   {
+    "braille": "⠯",
+    "english": "(and)"
+  },
+  {
     "braille": "⠰",
     "english": "[end-2]"
   },
@@ -242,10 +246,6 @@
   {
     "braille": "⠽",
     "english": "y"
-  },
-  {
-    "braille": "⠽",
-    "english": "(and)"
   },
   {
     "braille": "⠾",

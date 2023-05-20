@@ -2,7 +2,6 @@
   min-height: calc(4 * var(--margin-page));
   padding: calc(0.5 * var(--margin-page));
   background-color: var(--color-light);
-  font-size: 1.5rem;
   border-radius: calc(0.4 * var(--margin-page));
   display: flex;
   flex-direction: column;
@@ -12,14 +11,21 @@
 
 .braille {
   color: var(--color-dark);
+  background-color: white;
+  border-radius: calc(0.2 * var(--margin-page));
+  font-size: 1.2rem;
 }
 
 .english {
   color: var(--color-accent-light);
+  font-size: 0.3rem;
 }
 
-@media only screen and (min-width: 415px) {
-  .ref-cell {
-    font-size: 1.2rem;
+@media only screen and (min-width: 660px) {
+  .braille {
+    font-size: 1.8rem;
+  }
+  .english {
+    font-size: 0.6rem;
   }
 }

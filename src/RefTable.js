@@ -12,7 +12,8 @@ function RefTable({ displayOrder }) {
     >
       {displayOrder.seq.map((cp, i) => (
         <RefCell
-          key={cp ?? i}
+          key={cp ?? 100 + i}
+          i={i}
           braille={br.brailleCells[cp]?.braille ?? ""}
           english={br.brailleCells[cp]?.english ?? ""}
         />
