@@ -1,0 +1,258 @@
+[
+  {
+    "braille": "⠀",
+    "english": " "
+  },
+  {
+    "braille": "⠁",
+    "english": "a"
+  },
+  {
+    "braille": "⠂",
+    "english": "(ea)"
+  },
+  {
+    "braille": "⠃",
+    "english": "b"
+  },
+  {
+    "braille": "⠄",
+    "english": "'"
+  },
+  {
+    "braille": "⠅",
+    "english": "k"
+  },
+  {
+    "braille": "⠆",
+    "english": "(bb)"
+  },
+  {
+    "braille": "⠇",
+    "english": "l"
+  },
+  {
+    "braille": "⠈",
+    "english": "[accent]"
+  },
+  {
+    "braille": "⠉",
+    "english": "c"
+  },
+  {
+    "braille": "⠊",
+    "english": "i"
+  },
+  {
+    "braille": "⠋",
+    "english": "f"
+  },
+  {
+    "braille": "⠌",
+    "english": "(st)"
+  },
+  {
+    "braille": "⠍",
+    "english": "m"
+  },
+  {
+    "braille": "⠎",
+    "english": "s"
+  },
+  {
+    "braille": "⠏",
+    "english": "p"
+  },
+  {
+    "braille": "⠐",
+    "english": "[start-1]"
+  },
+  {
+    "braille": "⠑",
+    "english": "e"
+  },
+  {
+    "braille": "⠒",
+    "english": "(cc)"
+  },
+  {
+    "braille": "⠓",
+    "english": "h"
+  },
+  {
+    "braille": "⠔",
+    "english": "(in)"
+  },
+  {
+    "braille": "⠕",
+    "english": "o"
+  },
+  {
+    "braille": "⠖",
+    "english": "(ff)"
+  },
+  {
+    "braille": "⠗",
+    "english": "r"
+  },
+  {
+    "braille": "⠘",
+    "english": "[start-2]"
+  },
+  {
+    "braille": "⠙",
+    "english": "d"
+  },
+  {
+    "braille": "⠚",
+    "english": "j"
+  },
+  {
+    "braille": "⠛",
+    "english": "g"
+  },
+  {
+    "braille": "⠜",
+    "english": "(ar)"
+  },
+  {
+    "braille": "⠝",
+    "english": "n"
+  },
+  {
+    "braille": "⠞",
+    "english": "t"
+  },
+  {
+    "braille": "⠟",
+    "english": "q"
+  },
+  {
+    "braille": "⠠",
+    "english": "[capital]"
+  },
+  {
+    "braille": "⠡",
+    "english": "(ch)"
+  },
+  {
+    "braille": "⠢",
+    "english": "(en)"
+  },
+  {
+    "braille": "⠣",
+    "english": "(gh)"
+  },
+  {
+    "braille": "⠤",
+    "english": "-"
+  },
+  {
+    "braille": "⠥",
+    "english": "u"
+  },
+  {
+    "braille": "⠦",
+    "english": "?"
+  },
+  {
+    "braille": "⠧",
+    "english": "v"
+  },
+  {
+    "braille": "⠨",
+    "english": "[end-1]"
+  },
+  {
+    "braille": "⠩",
+    "english": "(sh)"
+  },
+  {
+    "braille": "⠪",
+    "english": "(ow)"
+  },
+  {
+    "braille": "⠫",
+    "english": "(ed)"
+  },
+  {
+    "braille": "⠬",
+    "english": "(ing)"
+  },
+  {
+    "braille": "⠭",
+    "english": "x"
+  },
+  {
+    "braille": "⠮",
+    "english": "(the)"
+  },
+  {
+    "braille": "⠰",
+    "english": "[end-2]"
+  },
+  {
+    "braille": "⠱",
+    "english": "(wh)"
+  },
+  {
+    "braille": "⠲",
+    "english": "(dis)"
+  },
+  {
+    "braille": "⠳",
+    "english": "(ou)"
+  },
+  {
+    "braille": "⠴",
+    "english": "(was)"
+  },
+  {
+    "braille": "⠵",
+    "english": "z"
+  },
+  {
+    "braille": "⠶",
+    "english": "(gg)"
+  },
+  {
+    "braille": "⠷",
+    "english": "(of)"
+  },
+  {
+    "braille": "⠸",
+    "english": "[start-3]"
+  },
+  {
+    "braille": "⠹",
+    "english": "(th)"
+  },
+  {
+    "braille": "⠺",
+    "english": "w"
+  },
+  {
+    "braille": "⠻",
+    "english": "(er)"
+  },
+  {
+    "braille": "⠼",
+    "english": "[number]"
+  },
+  {
+    "braille": "⠽",
+    "english": "y"
+  },
+  {
+    "braille": "⠽",
+    "english": "(and)"
+  },
+  {
+    "braille": "⠾",
+    "english": "(with)"
+  },
+  {
+    "braille": "⠿",
+    "english": "(for)"
+  }
+]
