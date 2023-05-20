@@ -20,7 +20,11 @@ function App() {
     },
   };
 
-  const [displayOrder] = useState(orderings.unicode);
+  const [displayOrder, setDisplayOrder] = useState(orderings["unicode"]);
+
+  function handleChange(event) {
+    setDisplayOrder(orderings[event.target.value]);
+  }
 
   return (
     <div>
@@ -28,7 +32,11 @@ function App() {
       <h5 className="description">
         Visual cheat sheet for Unified English Braille
       </h5>
-      <RadioGroup className="radio-group" names={Object.keys(orderings)} />
+      <RadioGroup
+        className="radio-group"
+        handleChange={handleChange}
+        names={Object.keys(orderings)}
+      />
       <RefTable displayOrder={displayOrder} />
     </div>
   );
