@@ -1,8 +1,8 @@
-import brailleCells from "./braille_from_english-array.json";
+import brailleMap from "./braille_map.json";
 
 export default class Braille {
-  static brailleCells = brailleCells;
-  static mapAToB = Braille.createMap(brailleCells);
+  static brailleCells = brailleMap;
+  static mapAToB = Braille.createMap(brailleMap);
   static mapBToA = Braille.invertMap(Braille.mapAToB);
 
   static createMap(array) {
