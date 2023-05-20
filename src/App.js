@@ -1,5 +1,6 @@
 import { useState } from "react";
 import AppBar from "./AppBar";
+import RadioGroup from "./RadioGroup";
 import RefTable from "./RefTable";
 import "./App.css";
 
@@ -27,6 +28,7 @@ function App() {
       <h5 className="description">
         Visual cheat sheet for Unified English Braille
       </h5>
+      <RadioGroup className="radio-group" names={Object.keys(orderings)} />
       <RefTable displayOrder={displayOrder} />
     </div>
   );
