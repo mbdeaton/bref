@@ -1,8 +1,8 @@
 import "./RefCell.css";
 
-function RefCell({ i, braille, english }) {
+function RefCell({ i, braille, english, ...props }) {
   return (
-    <div className="ref-cell">
+    <div className="ref-cell" {...props}>
       <p className="braille">{braille}</p>
       <p className="english">{english}</p>
     </div>

@@ -10,12 +10,15 @@ function RefTable({ displayOrder }) {
         gridTemplateColumns: `repeat(${displayOrder.ncol}, minmax(0, 1fr))`,
       }}
     >
-      {displayOrder.seq.map((cp, i) => (
+      {displayOrder.seq.map((codepoint, i) => (
         <RefCell
-          key={cp ?? 100 + i}
+          key={codepoint ?? 100 + i} /* index null cells > 100 */
           i={i}
-          braille={br.brailleCells[cp]?.braille ?? ""}
-          english={br.brailleCells[cp]?.english ?? ""}
+          style={{
+            backgroundColor: codepoint === null ? "transparent" : "",
+          }}
+          braille={br.brailleCells[codepoint]?.braille ?? ""}
+          english={br.brailleCells[codepoint]?.english ?? ""}
         />
       ))}
     </div>
