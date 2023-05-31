@@ -11,8 +11,6 @@
 
 .braille {
   color: var(--color-dark);
-  background-color: white;
-  padding: 6px 4px 0 5px;
   border-radius: calc(0.2 * var(--margin-page));
   font-size: 1.2rem;
 }
