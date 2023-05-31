@@ -2,10 +2,10 @@ import "./RefCell.css";
 
 function RefCell({ braille, english, ...props }) {
   return (
-    <div className="ref-cell" {...props}>
+    <button className="ref-cell" value={braille} {...props}>
       <p className="braille">{braille}</p>
       <p className="english">{english}</p>
-    </div>
+    </button>
   );
 }
 
