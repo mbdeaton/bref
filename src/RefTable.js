@@ -3,6 +3,12 @@ import RefCell from "./RefCell";
 import "./RefTable.css";
 
 function RefTable({ displayOrder }) {
+  function handleClick(event) {
+    // if (event.target.value !== undefined) {
+    console.log(`clicked ${event.target.value}`);
+    // }
+  }
+
   return (
     <div
       className="ref-table"
@@ -17,8 +23,9 @@ function RefTable({ displayOrder }) {
           style={{
             backgroundColor: codepoint === null ? "transparent" : "",
           }}
-          braille={br.brailleCells[codepoint]?.braille ?? ""}
-          english={br.brailleCells[codepoint]?.english ?? ""}
+          braille={br.brailleCells[codepoint]?.braille ?? undefined}
+          english={br.brailleCells[codepoint]?.english ?? undefined}
+          onClick={handleClick}
         />
       ))}
     </div>
