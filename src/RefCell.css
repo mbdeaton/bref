@@ -1,6 +1,10 @@
+@font-face {
+  font-family: "Optimamodoki";
+  src: url("fonts/Optimamodoki-rgABO.ttf");
+}
+
 .ref-cell {
-  min-height: calc(4 * var(--margin-page));
-  padding: calc(0.5 * var(--margin-page));
+  padding-bottom: calc(0.5 * var(--margin-page));
   background-color: var(--color-light);
   border-radius: calc(0.4 * var(--margin-page));
   display: flex;
@@ -11,8 +15,9 @@
 
 .braille {
   color: var(--color-dark);
+  font-family: "Optimamodoki", sans-serif;
   border-radius: calc(0.2 * var(--margin-page));
-  font-size: 1.2rem;
+  font-size: 2rem;
 }
 
 .english {
@@ -22,7 +27,7 @@
 
 @media only screen and (min-width: 660px) {
   .braille {
-    font-size: 1.8rem;
+    font-size: 3rem;
   }
   .english {
     font-size: 0.6rem;
