@@ -5,7 +5,7 @@
 .radio-group label {
   padding: 0.2rem 0.5rem;
   border-radius: calc(0.2 * var(--margin-page));
-  border: 1px solid lightgray;
+  border: 2px solid lightgray;
   cursor: pointer;
 }
 
