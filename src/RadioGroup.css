@@ -11,5 +11,5 @@
 
 .radio-group label:has(input[type="radio"]:checked) {
   background-color: var(--color-accent-light);
-  border: none;
+  border: 2px solid transparent;
 }
