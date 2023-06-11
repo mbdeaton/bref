@@ -17,17 +17,43 @@ export default class Braille {
     return Object.fromEntries(Object.entries(obj).map(([k, v]) => [v, k]));
   }
 
-  static singleToAscii(braille) {
-    if (braille.length !== 1) {
+  static isBraille(str) {
+    for (let token of str) {
+      if (
+        token.charCodeAt(0) >= parseInt("2800", 16) &&
+        token.charCodeAt(0) <= parseInt("283F", 16)
+      ) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  }
+
+  static singleToAscii(token) {
+    if (token.length !== 1) {
       throw new Error("Arg must be a single unicode code point");
     }
-    if (
-      braille.charCodeAt(0) < parseInt("2800", 16) ||
-      braille.charCodeAt(0) > parseInt("283F", 16)
-    ) {
+    if (!Braille.isBraille(token)) {
       throw new Error("Arg must have codepoint in range [0x2800, 0x283F]");
     }
-    return Braille.mapBToA[braille];
+    return Braille.mapBToA[token];
+  }
+
+  static toAscii(string) {
+    const tokens = string.split("");
+    let trans = "";
+    for (let token of tokens) {
+      trans += Braille.singleToAscii(token);
+    }
+    return trans;
+  }
+
+  static singleToBraille(token) {
+    if (!(token in Braille.mapAToB)) {
+      throw new Error(`Translation of ${token} not found`);
+    }
+    return Braille.mapAToB[token.toLowerCase()];
   }
 
   static toBraille(string) {
@@ -45,12 +71,5 @@ export default class Braille {
       i = next;
     }
     return trans.join("");
-  }
-
-  static singleToBraille(ascii) {
-    if (!(ascii in Braille.mapAToB)) {
-      throw new Error(`Translation of ${ascii} not found`);
-    }
-    return Braille.mapAToB[ascii.toLowerCase()];
   }
 }
