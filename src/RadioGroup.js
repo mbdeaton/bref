@@ -1,6 +1,8 @@
+import "./RadioGroup.css";
+
 function RadioGroup({ names, handleChange, displayOrder, ...props }) {
   return (
-    <form {...props}>
+    <form className="radio-group" {...props}>
       {names.map((name) => (
         <label key={name}>
           <input

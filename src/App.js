@@ -8,7 +8,7 @@ import orderings from "./orderings.json";
 import "./App.css";
 
 function App() {
-  const [displayOrder, setDisplayOrder] = useState("unicode");
+  const [displayOrder, setDisplayOrder] = useState("iceb");
   const [brailleInput, setBrailleInput] = useState("");
 
   function handleInputChange(event) {
