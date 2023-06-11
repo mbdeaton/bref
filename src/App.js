@@ -29,6 +29,10 @@ function App() {
     setDisplayOrder(event.target.value);
   }
 
+  function handleCellClick(brailleCell) {
+    setBrailleInput(brailleInput + brailleCell); // TODO: handle cursor location flexibility
+  }
+
   return (
     <div>
       <AppBar />
@@ -45,7 +49,7 @@ function App() {
         names={Object.keys(orderings)}
         displayOrder={displayOrder}
       />
-      <RefTable displayOrder={displayOrder} />
+      <RefTable displayOrder={displayOrder} handleClick={handleCellClick} />
     </div>
   );
 }

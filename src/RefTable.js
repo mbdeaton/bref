@@ -3,13 +3,7 @@ import orderings from "./orderings.json";
 import RefCell from "./RefCell";
 import "./RefTable.css";
 
-function RefTable({ displayOrder }) {
-  function handleClick(event) {
-    // if (event.target.value !== undefined) {
-    console.log(`clicked ${event.target.value}`);
-    // }
-  }
-
+function RefTable({ handleClick, displayOrder }) {
   const cellOrder = orderings[displayOrder];
 
   return (
@@ -28,7 +22,7 @@ function RefTable({ displayOrder }) {
           }}
           braille={br.brailleCells[codepoint]?.braille ?? undefined}
           english={br.brailleCells[codepoint]?.english ?? undefined}
-          onClick={handleClick}
+          handleClick={handleClick}
         />
       ))}
     </div>

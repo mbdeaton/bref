@@ -1,8 +1,13 @@
 import "./RefCell.css";
 
-function RefCell({ braille, english, ...props }) {
+function RefCell({ handleClick, braille, english, ...props }) {
   return (
-    <button className="ref-cell" value={braille} {...props}>
+    <button
+      className="ref-cell"
+      value={braille}
+      onClick={() => handleClick(braille)}
+      {...props}
+    >
       <p className="braille">{braille}</p>
       <p className="english">{english}</p>
     </button>
