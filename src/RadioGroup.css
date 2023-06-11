@@ -7,6 +7,7 @@
   border-radius: calc(0.2 * var(--margin-page));
   border: 2px solid lightgray;
   cursor: pointer;
+  color: gray;
 }
 
 .radio-group label:has(input[type="radio"]:checked) {
