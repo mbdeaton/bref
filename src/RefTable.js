@@ -1,4 +1,5 @@
 import br from "./braille";
+import orderings from "./orderings.json";
 import RefCell from "./RefCell";
 import "./RefTable.css";
 
@@ -9,14 +10,16 @@ function RefTable({ displayOrder }) {
     // }
   }
 
+  const cellOrder = orderings[displayOrder];
+
   return (
     <div
       className="ref-table"
       style={{
-        gridTemplateColumns: `repeat(${displayOrder.ncol}, minmax(0, 1fr))`,
+        gridTemplateColumns: `repeat(${cellOrder.ncol}, minmax(0, 1fr))`,
       }}
     >
-      {displayOrder.seq.map((codepoint, i) => (
+      {cellOrder.seq.map((codepoint, i) => (
         <RefCell
           key={codepoint ?? 100 + i} /* index null cells > 100 */
           i={i}

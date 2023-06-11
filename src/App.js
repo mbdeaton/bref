@@ -6,10 +6,10 @@ import orderings from "./orderings.json";
 import "./App.css";
 
 function App() {
-  const [displayOrder, setDisplayOrder] = useState(orderings["unicode"]);
+  const [displayOrder, setDisplayOrder] = useState("unicode");
 
   function handleChange(event) {
-    setDisplayOrder(orderings[event.target.value]);
+    setDisplayOrder(event.target.value);
   }
 
   return (
@@ -22,6 +22,7 @@ function App() {
         className="radio-group"
         handleChange={handleChange}
         names={Object.keys(orderings)}
+        displayOrder={displayOrder}
       />
       <RefTable displayOrder={displayOrder} />
     </div>
