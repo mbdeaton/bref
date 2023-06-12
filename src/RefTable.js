@@ -3,7 +3,7 @@ import orderings from "./orderings.json";
 import RefCell from "./RefCell";
 import "./RefTable.css";
 
-function RefTable({ handleClick, displayOrder }) {
+function RefTable({ handleClick, displayOrder, dotFilter }) {
   const cellOrder = orderings[displayOrder];
 
   return (
@@ -16,9 +16,9 @@ function RefTable({ handleClick, displayOrder }) {
       {cellOrder.seq.map((codepoint, i) => (
         <RefCell
           key={codepoint ?? 100 + i} /* index null cells > 100 */
-          i={i}
           style={{
             backgroundColor: codepoint === null ? "transparent" : "",
+            opacity: (dotFilter & codepoint) === dotFilter ? "100%" : "40%",
           }}
           braille={br.brailleCells[codepoint]?.braille ?? undefined}
           english={br.brailleCells[codepoint]?.english ?? undefined}

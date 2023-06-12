@@ -1,0 +1,25 @@
+.dot-selector {
+  margin: var(--margin-page);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+  height: 8rem;
+  width: 4rem;
+}
+
+.dot-selector input {
+  /* Eliminate browser default styling so we can overwrite */
+  visibility: hidden;
+}
+
+.dot-selector label {
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid lightgray;
+}
+
+.dot-selector label:has(input[type="checkbox"]:checked) {
+  background: black;
+  border: 2px solid transparent;
+}

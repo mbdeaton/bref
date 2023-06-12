@@ -32,7 +32,25 @@ body {
   color: var(--color-dark);
 }
 
-.radio-group {
+.table-tools {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "dots inputs"
+    "dots radios";
+}
+
+.dot-area {
+  grid-area: dots;
+}
+
+.input-area {
+  grid-area: inputs;
+}
+
+.radio-area {
+  grid-area: radios;
   margin: var(--margin-page);
   display: flex;
   gap: 1rem;

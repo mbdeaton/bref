@@ -1,6 +1,7 @@
 import { useState } from "react";
 import AppBar from "./AppBar";
 import br from "./braille";
+import DotSelector from "./DotSelector";
 import RadioGroup from "./RadioGroup";
 import RefTable from "./RefTable";
 import Translator from "./Translator";
@@ -10,6 +11,17 @@ import "./App.css";
 function App() {
   const [displayOrder, setDisplayOrder] = useState("iceb");
   const [brailleInput, setBrailleInput] = useState("");
+  const [dotFilter, setDotFilter] = useState(0x0);
+
+  function handleDotSelect(event) {
+    let filter = dotFilter;
+    if (event.target.checked) {
+      filter += Number(event.target.value);
+    } else {
+      filter -= Number(event.target.value);
+    }
+    setDotFilter(filter);
+  }
 
   function handleInputChange(event) {
     /* Convert non-braille text to braille */
@@ -39,17 +51,25 @@ function App() {
       <h5 className="description">
         Visual cheat sheet for Unified English Braille
       </h5>
-      <Translator
-        brailleInput={brailleInput}
-        handleChange={handleInputChange}
-      />
-      <RadioGroup
-        className="radio-group"
-        handleChange={handleDisplayChange}
-        names={Object.keys(orderings)}
+      <div className="table-tools">
+        <DotSelector className="dot-area" handleSelect={handleDotSelect} />
+        <Translator
+          className="input-area"
+          brailleInput={brailleInput}
+          handleChange={handleInputChange}
+        />
+        <RadioGroup
+          className="radio-area"
+          handleChange={handleDisplayChange}
+          names={Object.keys(orderings)}
+          displayOrder={displayOrder}
+        />
+      </div>
+      <RefTable
         displayOrder={displayOrder}
+        dotFilter={dotFilter}
+        handleClick={handleCellClick}
       />
-      <RefTable displayOrder={displayOrder} handleClick={handleCellClick} />
     </div>
   );
 }
