@@ -1,10 +1,7 @@
 .dot-selector {
-  margin: var(--margin-page);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.6rem;
-  height: 8rem;
-  width: 4rem;
+  gap: 1rem;
 }
 
 .dot-selector input {

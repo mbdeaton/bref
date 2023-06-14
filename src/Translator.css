@@ -1,5 +1,4 @@
 .translator {
-  margin: var(--margin-page);
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
