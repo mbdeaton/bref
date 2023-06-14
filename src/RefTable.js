@@ -3,12 +3,12 @@ import orderings from "./orderings.json";
 import RefCell from "./RefCell";
 import "./RefTable.css";
 
-function RefTable({ handleClick, displayOrder, dotFilter }) {
+function RefTable({ displayOrder, dotFilter, handleClick, className = "" }) {
   const cellOrder = orderings[displayOrder];
 
   return (
     <div
-      className="ref-table"
+      className={`ref-table ${className}`}
       style={{
         gridTemplateColumns: `repeat(${cellOrder.ncol}, minmax(0, 1fr))`,
       }}

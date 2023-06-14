@@ -1,9 +1,9 @@
 import br from "./braille";
 import "./Translator.css";
 
-function Translator({ brailleInput, handleChange, ...props }) {
+function Translator({ brailleInput, handleChange, className = "" }) {
   return (
-    <div className="translator">
+    <div className={`translator ${className}`}>
       <input
         className="text-field"
         id="braille-input"

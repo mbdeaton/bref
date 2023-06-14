@@ -1,8 +1,8 @@
 import "./DotSelector.css";
 
-function DotSelector({ handleSelect }) {
+function DotSelector({ handleSelect, className = "" }) {
   return (
-    <form className="dot-selector">
+    <form className={`dot-selector ${className}`}>
       <label htmlFor="dot1">
         <input type="checkbox" id="dot1" value={0x1} onChange={handleSelect} />
       </label>

@@ -60,9 +60,9 @@ function App() {
         />
         <RadioGroup
           className="radio-area"
-          handleChange={handleDisplayChange}
           names={Object.keys(orderings)}
           displayOrder={displayOrder}
+          handleChange={handleDisplayChange}
         />
       </div>
       <RefTable
